@@ -1,40 +1,26 @@
-// my_cpp_project/.vscode/launch.json
 {
     "version": "0.2.0",
     "configurations": [
-        {
-            "name": "Debug MyCppProject",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${workspaceFolder}/build/MyCppProject.exe",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}/build",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
-            "setupCommands": [
-                {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                }
-            ],
-            "preLaunchTask": "build",
-            "miDebuggerPath": "C:/raylib/w64devkit/bin/gdb.exe",
-            "setupCommands": [
-                {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                }
-            ],
-            "miDebuggerArgs": "",
-            "stopAtConnect": false,
-            "filterStdout": false,
-            "filterStderr": false,
-            "sourceFileMap": {},
-            "serverLaunchTimeout": 10000
-        }
+      {
+        "name": "Debug MyProgram",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/bin/MyProgram.exe",
+        "args": [],
+        "stopAtEntry": false,
+        "cwd": "${workspaceFolder}/bin",
+        "environment": [],
+        "externalConsole": false,
+        "MIMode": "gdb",
+        "miDebuggerPath": "C:/raylib/w64devkit/bin/gdb.exe",
+        "miDebuggerArgs": "",
+        "stopAtConnect": false,
+        "filterStdout": false,
+        "filterStderr": false,
+        "sourceFileMap": {},
+        "serverLaunchTimeout": 10000,
+        "preLaunchTask": "cmake"
+      }
     ]
-}
+  }
+  
