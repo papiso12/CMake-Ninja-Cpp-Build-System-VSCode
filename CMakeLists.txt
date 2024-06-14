@@ -1,21 +1,17 @@
 cmake_minimum_required(VERSION 3.10)
+project(PetSimulator)
 
-# Project name
-project(MyProgram VERSION 1.0)
+set(CMAKE_CXX_STANDARD 17)
 
-# Set output directory for executable
-set(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/bin)
+# Set the output directory for the executable to a 'bin' directory at the top level of the project
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 
-# Add main executable
-add_executable(MyProgram src/main.cpp)
+# Include the directory containing header files
+include_directories(${PROJECT_SOURCE_DIR}/include)
 
-# Add nlohmann_json library
-#include(FetchContent)
-#FetchContent_Declare(
-#  nlohmann_json
-#  GIT_REPOSITORY https://github.com/nlohmann/json.git
-#  GIT_TAG v3.11.3
-#)
-#FetchContent_MakeAvailable(nlohmann_json)
+# Find all source files in the src directory
+file(GLOB SOURCES ${PROJECT_SOURCE_DIR}/src/*.cpp)
 
-#target_link_libraries(MyProgram PRIVATE nlohmann_json::nlohmann_json)
+# Create the executable
+add_executable(PetSimulator ${SOURCES})
+
