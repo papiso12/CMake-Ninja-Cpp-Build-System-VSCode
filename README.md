@@ -6,4 +6,4 @@ HOW TO USE
 4. Press f5
 ENJOY
 
-This build system isnt perfect at all(cause I am not a good prgramer) so feel free to change anything 
+This build system isnt perfect at all(cause I am not a good prgramer) so feel free to change anything, future me
