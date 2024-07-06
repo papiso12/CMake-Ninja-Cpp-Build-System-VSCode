@@ -20,7 +20,7 @@ target_include_directories(MyProgram PRIVATE ${PROJECT_SOURCE_DIR}/include)
 target_compile_options(MyProgram PRIVATE -Wall -Wextra -Wpedantic)
 
 # Optional: Set the build type (uncomment the desired line)
-set(CMAKE_BUILD_TYPE Debug)
+# set(CMAKE_BUILD_TYPE Debug)
 # set(CMAKE_BUILD_TYPE Release)
 
 # Optional: Link with external libraries (if needed)

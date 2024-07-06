@@ -1,10 +1,10 @@
 {
-    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
-    "cmake.sourceDirectory": "${workspaceFolder}",
-    "C_Cpp.default.compileCommands": "${workspaceFolder}/build/compile_commands.json",
-    "cmake.configureArgs": [
+  "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+  "cmake.sourceDirectory": "${workspaceFolder}",
+  "C_Cpp.default.compileCommands": "${workspaceFolder}/build/compile_commands.json",
+  "cmake.configureArgs": [
       "-DCMAKE_C_COMPILER=C:/raylib/w64devkit/bin/gcc.exe",
       "-DCMAKE_CXX_COMPILER=C:/raylib/w64devkit/bin/g++.exe"
-    ]
-  }
-  
+  ],
+  "cmake.generator": "Ninja"
+}
