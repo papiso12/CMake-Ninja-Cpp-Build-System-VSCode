@@ -7,11 +7,14 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 # Set the output directory for the executable to a 'bin' directory at the top level of the project
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 
-# Find all source files in the src directory
-file(GLOB SOURCES ${PROJECT_SOURCE_DIR}/src/*.cpp)
+# Recursively find all source files in the src directory
+file(GLOB_RECURSE SOURCES "${PROJECT_SOURCE_DIR}/src/*.cpp")
+
+# Recursively find all header files in the include directory
+file(GLOB_RECURSE HEADERS "${PROJECT_SOURCE_DIR}/include/*.h")
 
 # Create the executable
-add_executable(MyProgram ${SOURCES})
+add_executable(MyProgram ${SOURCES} ${HEADERS})
 
 # Include the directory containing header files
 target_include_directories(MyProgram PRIVATE ${PROJECT_SOURCE_DIR}/include)
